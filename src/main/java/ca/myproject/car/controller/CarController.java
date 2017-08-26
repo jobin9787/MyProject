@@ -98,8 +98,12 @@ public class CarController {
 
 	@RequestMapping("/car/addList")
 	String getAdList(Model model) {
+		Map<String, String> carMakeList = new HashMap<>();
+		carMakeList = carService.getCarModelMap();
+		
 		List<CarAd> carAdList = carAdDao.getListAllCarAd();
 		model.addAttribute("caradlist", carAdList);
+		model.addAttribute("carMakeList", carMakeList);
 		return "/car/carAdList";
 	}
 }

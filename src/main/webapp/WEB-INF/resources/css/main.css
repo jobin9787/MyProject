@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+input[type="file"] {
+  display: block;
+}
+.imageThumb {
+  max-height: 75px;
+  border: 2px solid;
+  padding: 1px;
+  cursor: pointer;
+}
+.pip {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+.remove {
+  background-image: url(./images/cancel.png); /* 16px x 16px */
+  display: block;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  width:160px;
+  height:160px; 
+  background-repeat: no-repeat;
+}
+.remove:hover {
+  background: white;
+  color: black;
+}

@@ -18,8 +18,11 @@
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
     
+      <!-- Bootstrap core CSS -->
+    <link href="<c:url value="/resources/css/jasny-bootstrap.min.css"/>" rel="stylesheet">
+    
         <!-- main CSS -->
-<%--     <link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet"> --%>
+    <link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
 
 
   </head>
