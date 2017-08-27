@@ -13,29 +13,31 @@
 
 		</div>
 
+			<form:form action="${pageContext.request.contextPath}/car/addCarAd"
+				method="post" commandName="carSearch" enctype="multipart/form-data">
 
 		<div>
-			<div class="form-group">
-				<label for="carMake"> Car Make</label>
-				<select id="carMake">
-					<option value="" label="--- Select ----" />
-					<options items="${carMake}" />
-				</select>
-			</div>
+				<div class="form-group">
+					<label for="carMake"> Car Make</label>
+					<form:select path="make" id="carMake">
+						<form:option value="" label="--- Select ----" />
+						<form:options items="${carMake}" />
+					</form:select>
+				</div>
 
 
 
-<!-- 			<div class="form-group"> -->
-<!-- 				<label for="carModel"> Car Model</label> -->
-<%-- 				<form:select path="" id="carModel"> --%>
-<%-- 					<form:option value="" label="--- Select ----" /> --%>
-<%-- 					<form:options items="${carMakeModel}" /> --%>
-<%-- 				</form:select> --%>
-<!-- 			</div> -->
+				<div class="form-group">
+					<label for="carModel"> Car Model</label>
+					<form:select path="model" id="carModel">
+						<form:option value="" label="--- Select ----" />
+						<form:options items="${carMakeModel}" />
+					</form:select>
+				</div>
 
 
 		</div>
-
+     </form:form>
 		<table class="table table-striped table-hover">
 			<thead>
 				<tr class="bg-success">
@@ -59,5 +61,9 @@
 			</c:forEach>
 		</table>
 
+			<script
+				src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			 
 
+			<script src="<c:url value="/resources/js/controller.js"/>"></script>
 		<%@ include file="/WEB-INF/view/template/footer.jsp"%>

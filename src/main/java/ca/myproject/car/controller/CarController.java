@@ -27,6 +27,7 @@ import ca.myproject.car.model.CarAd;
 import ca.myproject.helper.AjaxResponseBody;
 import ca.myproject.helper.CarService;
 import ca.myproject.helper.SearchCriteria;
+import ca.myproject.search.CarSearch;
 
 @Controller
 public class CarController {
@@ -100,10 +101,12 @@ public class CarController {
 	String getAdList(Model model) {
 		Map<String, String> carMakeList = new HashMap<>();
 		carMakeList = carService.getCarModelMap();
-		
+		CarSearch carSearch = new CarSearch();
 		List<CarAd> carAdList = carAdDao.getListAllCarAd();
 		model.addAttribute("caradlist", carAdList);
-		model.addAttribute("carMakeList", carMakeList);
+		model.addAttribute("carMake", carMakeList);
+		model.addAttribute("carSearch",carSearch );
+		
 		return "/car/carAdList";
 	}
 }
